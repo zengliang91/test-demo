@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TimeModal from '../../components/timeModal'
-import './demo.css'
+import { DemoContainer, DemoTitle } from '../../assest/style'
 const Demo: React.FC = () => {
   useEffect(() => {
     //
@@ -18,7 +18,7 @@ const Demo: React.FC = () => {
     setVisible(true);
   }
   return (
-    <div className="demo-box">
+    <DemoContainer>
       <div className="title">Order Summary</div>
       <div className="sub-title">Delivery Information:</div>
       <div className="checked-time">
@@ -35,7 +35,7 @@ const Demo: React.FC = () => {
         onDone={handleDone}
         onCancel={handleCancel}
       />
-    </div>
+    </DemoContainer>
   )
 }
 export default Demo;
